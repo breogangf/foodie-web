@@ -1,0 +1,16 @@
+<a class="btn btn-primary" href="/#/create/recipe"><span class="glyphicon glyphicon-plus"></span> Crear receta</a>
+<br><br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Nombre</th>
+    <th>Categoría</th>
+    <th>Tiempo de preparación</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="recipe in recipes">
+      <td><a ng-href="/#/recipe/{{ recipe._id }}">{{ recipe.name }}</a></td>
+      <td>{{ recipe.category }}</td>
+      <td><p><span class="glyphicon glyphicon-time"></span> {{ recipe.cook_time }} minutos</p></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+<image ng-src="http://foodie-5labs.rhcloud.com/images/{{recipe.image}}"/>
+    <h1> {{ recipe.name }} </h1>
+    <h3>
+        <i class="fa fa-history" style="font-size:24px"></i> {{ recipe.cook_time }}" &nbsp; <i class="fa fa-cutlery" style="font-size:24px"></i> {{ recipe.category }} 
+    </h3>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr><th>Ingredientes</th>
+    <th>Cantidad</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="ingredient in recipe.ingredients">
+      <td>{{ ingredient.name }}</td>
+      <td>{{ ingredient.quantity }}</td>
+    </tr>
+    <thead>
+
+</table>
+
+<table class="table table-striped">
+  <thead>
+    
+    <tr><th>Paso</th>
+    <th>Descripción</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="direction in recipe.directions">
+      <td>{{ direction.step }}</td>
+      <td>{{ direction.description }}</td>
+    </tr>
+  </tbody>
+    <thead>
+
+</table>
+
+
+
+
+
